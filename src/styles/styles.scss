@@ -1,0 +1,1870 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//Fonts
+
+@mixin welcomeFont {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  align-items: center;
+  text-align: center;
+}
+@mixin welcomeTabletFont {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 41px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin bodyAbout {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 34px;
+
+  @media (min-width: 768px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  @media (min-width: 1440px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin quoteAbout {
+  @media (min-width: 768px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    color: $mainColorFont;
+  }
+  @media (min-width: 1440px) {
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: $mainColorFont;
+  }
+}
+
+@mixin servicesList {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 53px;
+  line-height: 59px;
+  letter-spacing: -0.03em;
+}
+
+@mixin serviceClick {
+  font-family: "Archivo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 47px;
+  letter-spacing: -0.005em;
+  color: $mainColorWhiteFont;
+
+  @media (min-width: 760px) {
+    margin-top: 56px;
+    margin-left: 33px;
+    font-family: "Archivo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 47px;
+    letter-spacing: -0.005em;
+    color: $mainColorWhiteFont;
+  }
+}
+
+@mixin serviceClickText {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 34px;
+  color: #000000;
+}
+
+@mixin serviceClickLaptop {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 34px;
+  color: #000000;
+}
+
+@mixin contactInfo {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  @media (min-width: 760px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.03em;
+  }
+  @media (min-width: 1440px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 54px;
+    letter-spacing: -0.03em;
+  }
+}
+
+@mixin keepInTouch {
+  margin-top: 142px;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.03em;
+
+  @media (min-width: 768px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 40px;
+
+    letter-spacing: -0.03em;
+  }
+}
+
+@mixin hiring {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-decoration-line: underline;
+
+  @media (min-width: 768px) {
+    font-family: "Heebo";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.03em;
+    text-decoration-line: underline;
+  }
+}
+
+@mixin name {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  color: $mainColorWhiteFont;
+  text-align: left;
+}
+
+@mixin pronoun {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  color: $mainColorWhiteFont;
+}
+
+@mixin jobtitle {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  color: #a7f4ff;
+}
+
+@mixin team {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #a7f4ff;
+}
+
+@mixin university {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: $mainColorWhiteFont;
+}
+
+@mixin list {
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 53px;
+  line-height: 59px;
+  letter-spacing: -0.03em;
+  color: $mainColorFont;
+}
+
+@mixin visit {
+  margin-top: 345px;
+  margin-left: 75px;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 54px;
+  letter-spacing: -0.03em;
+}
+
+//Backgrounds Colors
+
+$mainDayBackground: #f8eadd;
+$mainNightBackground: #020224;
+
+//Backgrounds Radial gradient Colors
+
+$gradientRadialDayBackground: radial-gradient(
+  50% 50% at 50% 50%,
+  #ffffff 1.56%,
+  rgba(181, 251, 255, 0.93734) 60.94%,
+  rgba(185, 251, 255, 0.940638) 77.6%,
+  #0085ff 89.58%,
+  #1ef1ff 98.96%
+);
+$gradientRadialSunsetBackground: radial-gradient(
+  50% 50% at 50% 50%,
+  #ff1f00 56.25%,
+  #fff3b5 86.98%,
+  #ff00b3 100%
+);
+$gradientRadialNightBackground: radial-gradient(
+  50% 50% at 50% 50%,
+  #0c07f4 44.27%,
+  #6102c0 87.5%,
+  #020224 100%
+);
+$gradientRadialMorningBackground: radial-gradient(
+  50% 50% at 50% 50%,
+  #fff500 65.1%,
+  #2cdc91 79.17%,
+  #eac6ac 93.23%,
+  #00afaf 100%,
+  #00afaf 100%
+);
+
+//Backgrounds Linear gradient Colors
+
+$gradientLinearDayBackground: linear-gradient(
+  131.5deg,
+  #0185ff 41.25%,
+  #51f5ff 59.61%
+);
+$gradientLinearDayBackground2: linear-gradient(
+  131.5deg,
+  #51f5ff 41.25%,
+  #ffffff 59.61%
+);
+$gradientLinearSunsetBackground: linear-gradient(
+  131.5deg,
+  #ff00b3 41.25%,
+  #ff5c00 59.61%
+);
+$gradientLinearSunsetBackground2: linear-gradient(
+  131.5deg,
+  #ff5c00 41.25%,
+  #fff8b5 59.61%
+);
+$gradientLinearNightBackground: linear-gradient(
+  131.5deg,
+  #000000 41.25%,
+  #0c07f4 59.61%
+);
+$gradientLinearNightBackground2: linear-gradient(
+  131.5deg,
+  #0800fb 41.25%,
+  #ce9fff 59.61%
+);
+$gradientLinearMorningBackground: linear-gradient(
+  131.5deg,
+  #00afaf 41.25%,
+  #2cdc91 59.61%
+);
+$gradientLinearMorningBackground2: linear-gradient(
+  131.5deg,
+  #2cdc91 41.25%,
+  #fff601 59.61%
+);
+
+// Font Colors
+
+$mainColorFont: #6b675e;
+$mainColorGrayFont: #6b675e26;
+$mainColorWhiteFont: #ffffff;
+$turquoiseDayColorFont: #35d8ff;
+$blueDayColorFont: #0185ff;
+$fucsiaSunsetColorFont: #ff00ff;
+$yellowSunsetColorFont: #fff8b5;
+$violetNightColorFont: #942ffe;
+$blueNightColorFont: #0500d2;
+$yellowNightColorFont: #f8eadd;
+$yellowMorningColorFont: #fff500;
+$greenMorningColorFont: #2cdc91;
+
+$colorLogoHeroDay: #0b4fff;
+$colorLogoHeroSunset: #fff6b3;
+$colorStartHereSunset: #ecffc2;
+$colorStartHereNight: #a9a6ff;
+$colorStartHereMorning: #66e36a;
+$colorWelcomeTabletDay: #0296ff;
+$colorLogoSunset: #ff01b4;
+
+//Home
+
+.container1 {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.navBar {
+  &__list {
+    position: absolute;
+    left: 27px;
+    top: 10px;
+    display: none;
+  }
+  .hamMenu {
+    svg {
+      display: none;
+    }
+  }
+  @media (min-width: 1440px) {
+    .navBar {
+      &__list {
+        position: absolute;
+        width: max-content;
+        left: 27px;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & a {
+          display: flex;
+          font-family: "Heebo";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 22px;
+          color: $colorLogoHeroDay;
+          margin: 5px;
+        }
+      }
+      &__hamMenu {
+        display: none;
+      }
+    }
+  }
+}
+
+//Hamburger
+
+.hamMenu {
+  justify-content: flex-end;
+  align-items: center;
+
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+  .ham1 .top {
+    stroke-dasharray: 40 139;
+  }
+  .ham1 .bottom {
+    stroke-dasharray: 40 180;
+  }
+  .ham1.active .top {
+    stroke-dashoffset: -98px;
+  }
+  .ham1.active .bottom {
+    stroke-dashoffset: -138px;
+  }
+}
+
+//HERO
+.hero {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  position: relative;
+
+  &__startHere {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+
+    & a {
+      font-family: "Heebo";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 27px;
+    }
+  }
+
+  &__welcome {
+    display: none;
+    width: 1327px;
+  }
+  &__welcomeTablet {
+    display: none;
+  }
+  &__logoHero {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    & svg {
+      width: 393px;
+      height: 90px;
+    }
+  }
+
+  &__logoHeroDay {
+    & svg path {
+      fill: $colorLogoHeroDay;
+    }
+  }
+
+  &__logoHeroSunset {
+    & svg path {
+      fill: $colorLogoHeroSunset;
+    }
+  }
+  &__logoHeroNight {
+    & svg path {
+      fill: $blueNightColorFont;
+    }
+  }
+  &__logoHeroMorning {
+    & svg path {
+      fill: $yellowMorningColorFont;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      &__startHere {
+        left: 95px;
+        top: 34px;
+      }
+
+      &__startHereDay {
+        & a {
+          color: $colorLogoHeroDay;
+        }
+      }
+
+      &__startHereSunset {
+        & a {
+          color: $colorStartHereSunset;
+        }
+      }
+
+      &__startHereNight {
+        & a {
+          color: $colorStartHereNight;
+        }
+      }
+
+      &__startHereMorning {
+        & a {
+          color: $colorStartHereMorning;
+        }
+      }
+
+      &__welcome {
+        display: none;
+      }
+      &__welcomeTablet {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @include welcomeTabletFont;
+      }
+
+      &__welcomeTabletDay {
+        color: $colorWelcomeTabletDay;
+      }
+
+      &__welcomeTabletSunset {
+        color: $colorStartHereSunset;
+      }
+
+      &__welcomeTabletNight {
+        color: $colorStartHereNight;
+      }
+
+      &__welcomeTabletMorning {
+        color: $colorStartHereMorning;
+      }
+
+      &__logoHero {
+        & img {
+          width: 730px;
+          height: 181px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .hero {
+      .navBar {
+        &__list {
+          position: absolute;
+          width: max-content;
+          left: 27px;
+          top: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          & a {
+            display: flex;
+            font-family: "Heebo";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 22px;
+            color: $colorLogoHeroDay;
+            margin: 5px;
+          }
+        }
+        &__hamMenu {
+          display: none;
+        }
+      }
+
+      &__startHere {
+        display: none;
+      }
+
+      &__welcome {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        @include welcomeFont;
+      }
+      &__welcomeDay {
+        color: $colorWelcomeTabletDay;
+      }
+
+      &__welcomeSunset {
+        color: $colorStartHereSunset;
+      }
+
+      &__welcomeNight {
+        color: $colorStartHereNight;
+      }
+
+      &__welcomeMorning {
+        color: $colorStartHereMorning;
+      }
+
+      &__welcomeTablet {
+        display: none;
+      }
+    }
+  }
+}
+
+.heroDay {
+  background: $gradientRadialDayBackground;
+}
+
+.heroSunset {
+  background: $gradientRadialSunsetBackground;
+}
+
+.heroNight {
+  background: $gradientRadialNightBackground;
+}
+
+.heroMorning {
+  background: $gradientRadialMorningBackground;
+}
+
+.startHereDay {
+  & a {
+    color: $colorLogoHeroDay;
+  }
+}
+
+.startHereSunset {
+  & a {
+    color: $colorStartHereSunset;
+  }
+}
+
+.startHereNight {
+  & a {
+    color: $colorStartHereNight;
+  }
+}
+
+.startHereMorning {
+  & a {
+    color: $colorStartHereMorning;
+  }
+}
+
+//ABOUT
+.about {
+  background: $mainDayBackground;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    padding-left: 115px;
+  }
+  @media (min-width: 1440px) {
+    padding-left: 168px;
+  }
+
+  &__logo {
+    position: absolute;
+    margin-left: 52px;
+    margin-top: 0px;
+
+    @media (min-width: 768px) {
+      margin-left: 0px;
+    }
+    & svg {
+      width: 218px;
+      height: 49px;
+    }
+  }
+
+  &__logoDay {
+    & svg {
+      & path {
+        fill: $turquoiseDayColorFont;
+      }
+    }
+  }
+
+  &__logoSunset {
+    & svg {
+      & path {
+        fill: $colorLogoSunset;
+      }
+    }
+  }
+
+  &__logoNight {
+    & svg path {
+      fill: $violetNightColorFont;
+    }
+  }
+
+  &__logoMorning {
+    & svg path {
+      fill: $greenMorningColorFont;
+    }
+  }
+
+  .hamMenu {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 330px;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      margin-left: 580px; 
+
+      svg {
+        width: 100% !important;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  .hamMenuNight {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 330px;
+    svg {
+      width: 100% !important;
+      path {
+        stroke: $yellowNightColorFont;
+      }
+    }
+
+    @media (min-width: 768px) {
+      position: absolute;
+      margin-left: 580px; 
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__container {
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &__description {
+      margin-top: 49px;
+      margin-left: 52px;
+      margin-right: 105px;
+      overflow-y: scroll;
+
+      @media (min-width: 768px) {
+        max-width: 35%;
+        margin-left: 0px;
+        margin-right: 66px;
+        margin-top: 190px;
+        flex: 1;
+        overflow-y: hidden;
+      }
+      @media (min-width: 1440px) {
+        margin-top: 315px;
+      }
+
+      &__text {
+        & p {
+          @include bodyAbout();
+          color: $mainColorFont;
+        }
+
+        @media (min-width: 768px) {
+          margin-left: 0px;
+          margin-right: 0px;
+          flex: 1;
+        }
+        @media (min-width: 768px) {
+          @include bodyAbout();
+        }
+      }
+
+      &__textNight {
+        & p {
+          @include bodyAbout();
+          color: $yellowNightColorFont;
+        }
+
+        @media (min-width: 768px) {
+          margin-left: 0px;
+          margin-right: 0px;
+          flex: 1;
+        }
+        @media (min-width: 768px) {
+          @include bodyAbout();
+        }
+      }
+
+      &__quote {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: flex;
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 70px;
+          width: 300px;
+          & p {
+            @include quoteAbout();
+          }
+
+          & p {
+            @include quoteAbout();
+            color: $yellowNightColorFont;
+            .spanNight {
+              color: $violetNightColorFont;
+            }
+          }
+
+          & p {
+            @include quoteAbout();
+            color: $mainColorFont;
+            .spanDay {
+              color: $turquoiseDayColorFont;
+            }
+          }
+
+          & p {
+            .spanSunset {
+              color: $fucsiaSunsetColorFont;
+            }
+          }
+
+          & p {
+            .spanMorning {
+              color: $greenMorningColorFont;
+            }
+          }
+        }
+
+        @media (min-width: 1440px) {
+          margin-left: 0px;
+          margin-right: 0px;
+          margin-top: 135px; 
+          width: 250px;
+        }
+      }
+    }
+
+    &__quoteNight {
+      p {
+        @include quoteAbout();
+        color: $yellowNightColorFont;
+        .spanNight {
+          color: $violetNightColorFont;
+        }
+      }
+    }
+
+    &__carrousel {
+      margin: 109px 121px 0px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      overflow-x: scroll;
+
+      & img {
+        margin-right: 26px;
+        align-self: flex-end;
+      }
+      &__img1 {
+        max-width: 325px;
+      }
+      &__img2 {
+        max-width: 315px;
+      }
+
+      &__img3 {
+        max-width: 347px;
+      }
+
+      @media (min-width: 768px) {
+        margin: 0px;
+        flex-direction: column;
+        align-items: flex-start;
+        //overflow-y: scroll;
+        flex: 1;
+        align-items: center;
+      }
+
+      @media (min-width: 768px) {
+        & img {
+          margin-bottom: 22px;
+          margin-left: 0px;
+          width: min-content;
+          align-self: flex-start;
+        }
+      }
+
+      @media (min-width: 1440px) {
+        margin-left: 131px;
+      }
+
+      @media (min-width: 1440px) {
+        & img {
+          align-self: end;
+          margin-left: 26px;
+          margin-bottom: 28px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+.aboutNight {
+  background: $mainNightBackground;
+}
+
+//ABOUT:MENU
+
+/*.ventana {
+}*/
+
+.aboutMenu {
+  background-color: $colorLogoHeroDay;
+  height: 100vh;
+  overflow: hidden;
+
+  @media (min-width: 760px) {
+    display: none;
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+
+  &__logo {
+    position: absolute;
+    margin-left: 29px;
+    margin-top: 0px;
+    & svg {
+      width: 218px;
+      height: 49px;
+      /* & path {
+        fill: #ffff;
+      }*/
+      // Which is the logo color???
+    }
+  }
+
+  .hamMenu {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 330px;
+    svg {
+      width: 100% !important;
+      path {
+        stroke: $mainColorWhiteFont;
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 337px;
+    margin-left: 46px;
+    &__menu li a {
+      font-family: "Heebo";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 53px;
+      line-height: 59px;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+      color: $mainColorWhiteFont;
+    }
+    & li a:hover {
+      color: $turquoiseDayColorFont;
+    }
+  }
+}
+
+//SERVICES
+
+.services {
+  background: $mainDayBackground;
+  height: 100vh;
+  overflow: hidden;
+  padding-left: 29px;
+
+  @media (min-width: 768px) {
+    padding-left: 33px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-left: 0px;
+  }
+
+  .hamMenu {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 300px;
+    svg {
+      width: 100% !important;
+    }
+    @media (min-width: 768px) {
+      margin-left: 660px;
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  .hamMenuNight {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 300px;
+    svg {
+      width: 100% !important;
+      path {
+        stroke: $yellowNightColorFont;
+      }
+    }
+
+    @media (min-width: 768px) {
+      position: absolute;
+      margin-left: 580px; 
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-top: 251px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    & svg {
+      width: 218px;
+    }
+
+    @media (min-width: 768px) {
+      position: absolute;
+      margin-top: 330px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-top: 265px;
+      margin-left: 31px;
+    }
+  }
+
+  &__logoDay {
+    & svg path {
+      fill: $turquoiseDayColorFont;
+    }
+  }
+
+  &__logoSunset {
+    & svg path {
+      fill: $colorLogoSunset;
+    }
+  }
+
+  &__logoNight {
+    & svg path {
+      fill: $violetNightColorFont;
+    }
+  }
+  &__logoMorning {
+    & svg path {
+      fill: $greenMorningColorFont;
+    }
+  }
+
+  &__containerList {
+    display: flex;
+    flex-direction: row;
+
+    &__list {
+      margin-left: 0px;
+      & li a {
+        @include servicesList();
+        color: rgba(107, 103, 94, 0.15);
+      }
+
+      & li a:hover {
+        color: $mainColorFont;
+      }
+
+      @media (min-width: 768px) {
+        margin-left: 277px;
+        margin-top: 365px;
+      }
+
+      @media (min-width: 1440px) {
+        margin-top: 305px;
+        margin-left: 277px;
+      }
+    }
+
+    &listNight {
+      & li a {
+        @include servicesList();
+        color: $yellowNightColorFont;
+      }
+
+      & li a:hover {
+        color: $yellowNightColorFont;
+      }
+    }
+
+    
+    &__description {
+      max-width: 10%;
+      &__text {
+        display: none;
+
+        @media (min-width: 1440px) {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin-right: 302px;
+          margin-left: 214px;
+          margin-top: 308px;
+          margin-bottom: 32px;
+
+          & p {
+            width: 332px;
+            font-family: Heebo;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+
+            color: $mainColorFont;
+          }
+        }
+      }
+        &__carrousel {
+          display: none;
+
+          @media (min-width: 1440px) {
+            display: inline-block;
+            margin-top: 32px;
+
+            
+          }
+        }
+      }
+    }
+  }
+
+
+.servicesNight {
+  background: $mainNightBackground;
+}
+
+//SERVICES:CLICK
+
+.servicesClick {
+  background-color: $turquoiseDayColorFont;
+  height: 100vh;
+  overflow: hidden;
+
+  @media (min-width: 1440px) {
+    background-image: url(../image9.png);
+    background-size: cover;
+  }
+
+  &__logo {
+    position: absolute;
+    margin-left: 29px;
+    margin-top: 0px;
+    & svg {
+      width: 218px;
+      height: 49px;
+      & path {
+        fill: #ffff;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: 31px;
+      margin-top: 866px;
+    }
+  }
+
+  .hamMenu {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 330px;
+
+    svg {
+      width: 100% !important;
+
+      path {
+        stroke: $mainColorWhiteFont;
+      }
+    }
+
+    @media (min-width: 760px) {
+      margin-top: 26px;
+      margin-left: 660px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: 1350px;
+
+      svg path {
+        stroke: #000000;
+      }
+    }
+  }
+
+  &__services {
+    & h2 {
+      margin-top: 57px;
+      margin-left: 29px;
+      @include serviceClick();
+      @media (min-width: 760px) {
+        margin-top: 56px;
+        margin-left: 33px;
+        @include serviceClick();
+      }
+
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+
+    & p {
+      @include serviceClickText();
+      margin: 55px 49px 48px 79px;
+
+      @media (min-width: 760px) {
+        margin: 158px 158px 216px 158px;
+      }
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+
+    &__group {
+      & p {
+        display: none;
+      }
+      @media (min-width: 760px) {
+        & p {
+          display: none;
+        }
+      }
+      @media (min-width: 1440px) {
+        display: flex;
+
+        & p {
+          @include serviceClickLaptop();
+          display: flex;
+          margin: 42px 83px 883px 558px;
+        }
+      }
+    }
+  }
+  &__image {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+}
+//CONTACT
+
+.contact {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 760px) {
+    padding-left: 90px;
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & svg {
+      width: 218px;
+    }
+  }
+
+  &__logoDay {
+    & svg path {
+      fill: $turquoiseDayColorFont;
+    }
+  }
+
+  &__logoSunset {
+    & svg path {
+      fill: $colorLogoSunset;
+    }
+  }
+
+  &__logoNight {
+    & svg path {
+      fill: $violetNightColorFont;
+    }
+  }
+  &__logoMorning {
+    & svg path {
+      fill: $greenMorningColorFont;
+    }
+  }
+
+  .hamMenu {
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 330px;
+
+    svg {
+      width: 100% !important;
+
+      path {
+        stroke: $mainColorWhiteFont;
+      }
+    }
+    @media (min-width: 768px) {
+      margin-top: 35px;
+      margin-left: 600px;
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__contactInfo {
+    margin-top: 209px;
+    margin-left: 31px;
+
+    & p {
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      @include contactInfo();
+      color: $mainColorWhiteFont;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 228px;
+      margin-left: 0px;
+      text-align-last: start;
+      & p {
+        @include contactInfo();
+      }
+    }
+
+    @media (min-width: 1440px) {
+      margin-top: 0px;
+      margin-left: 0px;
+
+      & p {
+        left: 0%;
+        transform: none;
+        position: none;
+        margin-top: 188px;
+        margin-left: 159px;
+        @include contactInfo();
+      }
+    }
+  }
+
+  &__contactInfoNight {
+    & p {
+      @include contactInfo();
+      color: $yellowNightColorFont;
+    }
+  }
+
+  &__keepInTouch {
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      @include keepInTouch();
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 310px;
+      margin-left: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      position: none;
+      transform: none;
+      left: 0%;
+      & p {
+        @include keepInTouch();
+      }
+    }
+
+    @media (min-width: 1440px) {
+      & p {
+        margin-top: 406px;
+        margin-left: 500px;
+        align-items: start;
+      }
+    }
+
+    &__mailbox {
+      margin-top: 61px;
+      @media (min-width: 768px) {
+        margin-top: 35px;
+      }
+      @media (min-width: 1440px) {
+        margin-left: 500px;
+        align-items: flex-start;
+      }
+
+      &__mail {
+        &__arrow {
+          display: flex;
+          align-items: normal;
+          width: 355px;
+          justify-content: space-between;
+
+          @media (min-width: 768px) {
+            width: 400px;
+            justify-content: space-between;
+          }
+        }
+
+        & input {
+          margin: 0px;
+          text-align: left;
+          font-family: "Heebo";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 22px;
+          line-height: 25px;
+          letter-spacing: -0.03em;
+          color: $mainColorWhiteFont;
+
+          @media (min-width: 1440px) {
+            font-family: "Heebo";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 25px;
+            letter-spacing: -0.03em;
+            color: $blueDayColorFont;
+          }
+        }
+        & a {
+          margin: 5px;
+          @media (min-width: 1440px) {
+            & svg path {
+              fill: $blueDayColorFont;
+            }
+          }
+        }
+
+        &__sinbordeFondo {
+          background-color: transparent;
+          border: 0;
+          outline: none;
+          border: 0;
+          text-align: center;
+          margin-top: 61px;
+          font-family: "Heebo";
+          font-style: normal;
+          font-weight: normal;
+          font-size: 27px;
+          line-height: 36px;
+          text-align: center;
+          letter-spacing: -0.03em;
+          color: $mainColorWhiteFont;
+
+          @media (min-width: 768px) {
+            left: 500px;
+            margin-top: 35px;
+          }
+
+          @media (min-width: 1440px) {
+            color: $blueDayColorFont;
+          }
+        }
+
+        &__linea {
+          border-top: 1.5px solid $mainColorWhiteFont;
+          height: 2px;
+          max-width: 450px;
+          padding: 0px;
+
+          @media (min-width: 1440px) {
+            border-color: $blueDayColorFont;
+          }
+        }
+      }
+    }
+  }
+
+  &__keepInTouchDay {
+    & p {
+      @include keepInTouch();
+      color: $blueDayColorFont;
+    }
+  }
+
+  &__keepInTouchSunset {
+    & p {
+      @include keepInTouch();
+      color: $yellowSunsetColorFont;
+    }
+  }
+
+  &__keepInTouchNight {
+    & p {
+      @include keepInTouch();
+      color: $yellowNightColorFont;
+    }
+  }
+
+  &__keepInTouchMorning {
+    & p {
+      @include keepInTouch();
+      color: $yellowNightColorFont;
+    }
+  }
+
+  &__visit {
+    display: none;
+    @media (min-width: 1440px) {
+      display: contents;
+      & p {
+        margin-top: 345px;
+        margin-left: 75px;
+        font-family: "Heebo";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 54px;
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+
+  &__linkHiring {
+    position: absolute;
+    margin-top: 371px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & p a {
+      @include hiring();
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 157px;
+      left: 115px;
+      transform: none;
+      & p {
+        @include hiring();
+      }
+    }
+
+    @media (min-width: 1440px) {
+      display: none;
+    }
+  }
+
+  &__linkHiringDay {
+    & p a {
+      @include hiring();
+      color: #51f6ff;
+    }
+  }
+
+  &__linkHiringSunset {
+    & p a {
+      @include hiring();
+      color: $yellowSunsetColorFont;
+    }
+  }
+
+  &__linkHiringNight {
+    & p a {
+      @include hiring();
+      color: $violetNightColorFont;
+    }
+  }
+
+  &__linkHiringMorning {
+    & p a {
+      @include hiring();
+      color: $yellowNightColorFont;
+    }
+  }
+
+  &__linkVisitDay {
+    & a p {
+      @include visit();
+      color: #51f6ff;
+    }
+  }
+
+  &__linkVisitSunset {
+    & a p {
+      @include visit();
+      color: $yellowSunsetColorFont;
+    }
+  }
+
+  &__linkVisitNight {
+    & a p {
+      @include visit();
+      color: $violetNightColorFont;
+    }
+  }
+
+  &__linkVisitMorning {
+    & a p {
+      @include visit();
+      color: $yellowNightColorFont;
+    }
+  }
+}
+
+.contactDay {
+  background: $gradientLinearDayBackground;
+}
+
+.contactSunset {
+  background: $gradientRadialSunsetBackground;
+}
+
+.contactNight {
+  background: $gradientRadialNightBackground;
+}
+
+.contactMorning {
+  background: $gradientRadialMorningBackground;
+}
+
+.team {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    height: 100vh;
+    background: $gradientLinearDayBackground;
+    overflow: hidden;
+    padding-bottom: 0px;
+
+    &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      & svg {
+        width: 218px;
+      }
+    }
+
+    &__members {
+      display: -webkit-inline-box;
+      justify-content: center;
+      margin-top: 337px;
+      left: 50%;
+      position: relative;
+      transform: translateX(-50%);
+      transition: all 0.3s;
+      padding-left: 100px;
+      padding-right: 68.62px;
+
+      div {
+        & img {
+          filter: grayscale(100%);
+          //  transition: all 0.3s;
+          width: 125px;
+          margin-right: 31.38px;
+        }
+        & img:hover {
+          filter: none;
+          //  transition: all 0.3s;
+        }
+      }
+
+      .uno {
+        //  transition: all 0.5s;
+        opacity: 0;
+        width: 125px;
+        position: absolute;
+        top: -200px;
+      }
+      div:hover > .uno {
+        opacity: 1;
+        -webkit-transition: opacity 500ms;
+        -moz-transition: opacity 500ms;
+        -o-transition: opacity 500ms;
+        -ms-transition: opacity 500ms;
+        transition: opacity 500ms; // transition: all 0.5s;
+      }
+      .uno {
+        .name {
+          width: 300px;
+          @include name();
+        }
+
+        .pronoun {
+          @include pronoun();
+          width: 300px;
+        }
+
+        .jobtitle {
+          @include jobtitle();
+          width: 300px;
+        }
+
+        .university {
+          @include university();
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    display: block;
+    height: 100vh;
+    background: $gradientLinearDayBackground;
+    overflow: hidden;
+    padding-bottom: 0px;
+
+    &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      & svg {
+        width: 218px;
+      }
+    }
+
+    &__members {
+      display: -webkit-inline-box;
+      justify-content: center;
+      margin-top: 337px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+
+      transition: all 0.3s;
+      div {
+        & img {
+          filter: grayscale(100%);
+          //  transition: all 0.3s;
+          width: 125px;
+          margin-right: 31.38px;
+        }
+        & img:hover {
+          filter: none;
+          //  transition: all 0.3s;
+        }
+      }
+
+      .uno {
+        //  transition: all 0.5s;
+        opacity: 0;
+        width: 125px;
+      }
+      div:hover > .uno {
+        opacity: 1;
+        -webkit-transition: opacity 500ms;
+        -moz-transition: opacity 500ms;
+        -o-transition: opacity 500ms;
+        -ms-transition: opacity 500ms;
+        transition: opacity 500ms; // transition: all 0.5s;
+      }
+      .uno {
+        .name {
+          width: 300px;
+          @include name();
+        }
+
+        .pronoun {
+          @include pronoun();
+          width: 300px;
+        }
+
+        .jobtitle {
+          @include jobtitle();
+          width: 300px;
+        }
+
+        .university {
+          @include university();
+          width: 300px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "amador-website",
+  "version": "1.0.0",
+  "main": "src/index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/keyserfaty/amador-website.git"
+  },
+  "author": "Karen <keserfaty@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --no-minify"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.7",
+    "postcss": "^8.2.15",
+    "sass": "^1.36.0"
+  },
+  "dependencies": {
+    "immer": "^9.0.5"
+  },
+  "description": "Amador website 🚀\r ---",
+  "bugs": {
+    "url": "https://github.com/keyserfaty/amador-website/issues"
+  },
+  "homepage": "https://github.com/keyserfaty/amador-website#readme"
+}
